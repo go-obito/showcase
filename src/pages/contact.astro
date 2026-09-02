@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact | Michael">
+	<section class="contact-page"><div><p class="eyebrow">Start a conversation</p><h1 class="display">Have a good<br /><em>idea?</em></h1><p class="muted">Have a problem that needs solving, or a project you would like to bring to life? I am always open to interesting challenges and meaningful projects.</p></div><div class="contact-panel"><p class="panel-label">Reach out directly</p><a class="email" href="mailto:hello@example.com">hello@example.com <span>↗</span></a><div class="contact-links"><a href="https://github.com/go-obito" target="_blank" rel="noreferrer">GitHub <span>↗</span></a><a href="/about">About me <span>↗</span></a></div></div></section>
+</Layout>
+
+<style>
+	.contact-page { display: grid; grid-template-columns: 1.1fr .9fr; gap: 100px; max-width: 1120px; margin: 0 auto; padding: 170px 0 140px; }.contact-page > div:first-child > .muted { max-width: 430px; font-size: 16px; }.contact-panel { align-self: end; padding: 28px 0 0; border-top: 1px solid #3b334d; }.panel-label { margin: 0 0 24px; color: #81798b; font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }.email { display: inline-block; color: #dcd3f7; font-size: clamp(20px, 3vw, 31px); letter-spacing: -.05em; }.email span, .contact-links span { color: #977aff; }.contact-links { display: flex; gap: 25px; margin-top: 60px; }.contact-links a { color: #a59da9; font-size: 13px; }.contact-links a:hover { color: #fff; }
+	@media (max-width: 760px) { .contact-page { grid-template-columns: 1fr; gap: 70px; padding: 110px 20px 90px; }.contact-panel { align-self: start; }.contact-links { margin-top: 40px; } }
+</style>

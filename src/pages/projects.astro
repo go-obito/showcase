@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+const projects = [
+	{ number: "01", name: "go-obito", type: "Open-source experiments", description: "A growing collection of beginner projects, tools, and experiments built while learning in public.", href: "https://github.com/go-obito" },
+	{ number: "02", name: "The next idea", type: "In progress", description: "The blank space where curiosity turns into the next thing worth building.", href: "https://github.com/go-obito" },
+];
+---
+
+<Layout title="Projects | Michael">
+	<section class="projects-page"><p class="eyebrow">Selected experiments</p><h1 class="display">Work in<br /><em>progress.</em></h1><p class="muted intro">Small projects, unfinished ideas, and the useful lessons found between the two. Everything lives on GitHub as it evolves.</p><div class="project-list">{projects.map((project) => <a class="project" href={project.href} target="_blank" rel="noreferrer"><span class="project-number">{project.number}</span><div><p class="project-type">{project.type}</p><h2>{project.name} <span>↗</span></h2><p class="muted">{project.description}</p></div><span class="project-status">{project.number === "01" ? "Exploring" : "Coming soon"}</span></a>)}</div></section>
+</Layout>
+
+<style>
+	.projects-page { max-width: 1120px; margin: 0 auto; padding: 140px 0 100px; }.intro { max-width: 420px; margin: 30px 0 85px; }.project-list { border-top: 1px solid #29262c; }.project { display: grid; grid-template-columns: 80px 1fr auto; gap: 30px; align-items: center; padding: 30px 0; border-bottom: 1px solid #29262c; transition: padding .25s, background .25s; }.project:hover { padding-inline: 18px; background: #121015; }.project-number { color: #8c6cff; font-size: 12px; }.project-type { margin: 0 0 12px; color: #807985; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }.project h2 { margin: 0 0 13px; font-size: 33px; font-weight: 500; letter-spacing: -.06em; }.project h2 span { color: #9678ff; font-size: 24px; }.project .muted { max-width: 400px; margin: 0; font-size: 13px; }.project-status { padding: 7px 11px; border: 1px solid #393341; border-radius: 999px; color: #948b9f; font-size: 11px; }
+	@media (max-width: 760px) { .projects-page { padding: 105px 20px 70px; }.intro { margin-bottom: 55px; }.project { grid-template-columns: 35px 1fr; gap: 15px; }.project-status { grid-column: 2; justify-self: start; }.project h2 { font-size: 27px; } }
+</style>

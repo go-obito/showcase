@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About | Michael">
+	<section class="inner-page"><p class="eyebrow">A bit of context</p><h1 class="display">The person<br />behind the <em>code.</em></h1><div class="about-layout"><div class="about-lead">I am a self-taught developer with a strong curiosity for understanding how software works beneath the surface.</div><div class="about-copy"><p class="muted">I enjoy building practical projects and exploring different areas of technology, from web development and Python to systems programming with Rust, cybersecurity, and embedded systems.</p><p class="muted">Rather than relying on tutorials, I learn through documentation, experimentation, problem-solving, and building things myself. I am especially interested in writing efficient, reliable software and continuously expanding my understanding of the systems behind the code.</p></div></div></section>
+	<section class="principles"><div><span>01</span><h2>Make it real.</h2><p class="muted">An idea becomes useful when it can survive contact with the real world.</p></div><div><span>02</span><h2>Stay curious.</h2><p class="muted">The best tools are often found by asking one more question.</p></div><div><span>03</span><h2>Build with purpose.</h2><p class="muted">Clean, reliable software is a form of respect for the people using it.</p></div></section>
+</Layout>
+
+<style>
+	.inner-page { max-width: 1120px; margin: 0 auto; padding: 140px 0 110px; }.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; margin-top: 70px; }.about-lead { max-width: 440px; font-size: 25px; letter-spacing: -.04em; line-height: 1.2; }.about-copy { max-width: 430px; }.about-copy p { margin: 0 0 23px; }.principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 45px; max-width: 1120px; padding: 30px 0 50px; border-top: 1px solid #29262c; }.principles span { color: #8c6cff; font-size: 12px; }.principles h2 { margin: 35px 0 10px; font-size: 24px; font-weight: 500; letter-spacing: -.04em; }.principles p { max-width: 220px; font-size: 13px; }
+	@media (max-width: 760px) { .inner-page { padding: 105px 20px 70px; }.about-layout, .principles { grid-template-columns: 1fr; gap: 35px; margin-top: 50px; }.principles { margin: 0 20px; }.principles h2 { margin-top: 18px; } }
+</style>
